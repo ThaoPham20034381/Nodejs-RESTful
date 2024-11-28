@@ -1,0 +1,23 @@
+<h2 class="page-header" >Search Student</h2>
+<form action="/StudentScore" method="get">
+    <div class="form-row">
+        <div class="form-item">
+            <label>Mã số sinh viên</label>
+            <input type="text" name="mssv" value="<%= SearchOptions.mssv %>">
+        </div>
+    </div>  
+    <div class="form-row form-row-end">
+        <button class="button button-primary" type="submit">Search</button> 
+    </div>
+</form>
+<br>
+<% sv.forEach(sv => { %>
+    <div class="sinhvien-row">
+        <div class="sinhvien-name"><%= sv.name %></div>
+        <div class="button-row">
+            <a class="button button-primary" href="/StudentScore/<%= sv.id %>">View</a>
+            <a class="button button-primary" href="/StudentScore/<%= sv.id %>/edit">Edit</a>
+            <%- include('../partials/deleteform', { url: `/StudentScore/${sv.id}` }) %>
+        </div>
+    </div>
+<% }); %>

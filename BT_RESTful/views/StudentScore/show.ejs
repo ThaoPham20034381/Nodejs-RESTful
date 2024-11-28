@@ -1,0 +1,18 @@
+<h2 class="page-header" > <%= sv.name %> </h2>
+
+<h4>MSSV: <%= sv.mssv %> </h4>
+
+<h4>Điểm thường kỳ 1: <%= sv.tk1 %></h4>
+
+<h4>Điểm thường kỳ 2: <%= sv.tk2 %> </h4>
+
+<h4>Điểm thi giữa kỳ: <%= sv.gk %> </h4>
+
+<h4>Điểm thi cuối kỳ: <%= sv.ck %> </h4>
+
+
+
+<div class="form-row form-row-end button-row">
+    <a class="button button-primary" href="/StudentScore/<%= sv.id %>/edit">Edit</a>  
+    <%- include('../partials/deleteform', { url : `/StudentScore/${sv.id}`}) %>
+</div>
