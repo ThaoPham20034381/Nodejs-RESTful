@@ -1,0 +1,14 @@
+<h2 class="page-header" > <%= sinhvien.name %> </h2>
+
+<h4>MSSV: <%= sinhvien.MSSV %> </h4>
+
+<h4>Date Of Birth: <%= sinhvien.DateOfBirth.toISOString().split('T')[0] %></h4>
+
+<h4>Lớp: <%= sinhvien.Class %> </h4>
+
+
+
+<div class="form-row form-row-end button-row">
+    <a class="button button-primary" href="/sinhvien/<%= sinhvien.id %>/edit">Edit</a>  
+    <%- include('../partials/deleteform', { url : `/sinhvien/${sinhvien.id}`}) %>
+</div>

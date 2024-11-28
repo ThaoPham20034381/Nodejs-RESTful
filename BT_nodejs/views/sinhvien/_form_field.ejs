@@ -1,0 +1,21 @@
+<div class="form-row">
+    <div class="form-item">
+        <label for="">Name</label>
+        <input type="text" name="name" value="<%= sinhvien.name %>">
+    </div>
+    <div class="form-item">
+        <label for="">MSSV</label>
+        <input type="text" name="MSSV" value="<%= sinhvien.MSSV %>">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-item">
+        <label for="">Date of birth</label>
+        <input type="date" name="DateOfBirth" value="<%= sinhvien.DateOfBirth == null ? '' :
+                sinhvien.DateOfBirth.toISOString().split('T')[0] %>">
+    </div>
+    <div class="form-item">
+        <label for="">Class</label>
+        <input type="text" name="Class" value="<%= sinhvien.Class %>">
+    </div>
+</div>

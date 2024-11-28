@@ -1,0 +1,8 @@
+<h2 class="page-header">Edit sinhvien</h2>
+<form action="/sinhvien/<%= sinhvien.id %>?_method=PUT" method="post">
+    <%- include('_form_field') %>
+    <div class="form-row form-row-end button-row">
+        <a class="button button-danger" href="/sinhvien/<%= sinhvien.id %>">Cancel</a>
+        <button class="button button-primary" type="submit">Update</button>
+    </div>
+</form> 
