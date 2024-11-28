@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="./callAPI.js"></script>
+    <script
+      defer
+      src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"
+    ></script>
+  </head>
+  <body>
+    <h1>Thi Giữa kì</h1>
+
+    <!-- form tìm kiêm  -->
+    <form action="" class="findStudent" style="margin: 12px 0px">
+      <input
+        type="text"
+        name="textFindStudent"
+        placeholder="Tìm kiếm sinh viên theo MSSV"
+        style="width: 420px"
+        required
+      />
+      <button type="submit">Tìm kiếm</button>
+    </form>
+    <!-- form thêm sản phẩm  -->
+    <form
+      action=""
+      class="formSubmit"
+      style="
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        margin: 12px 0px;
+      "
+    >
+      <h2>Thêm sinh viên</h2>
+      <input type="text" placeholder="Nhập tên sinh viên" name="name" required />
+      <input type="text" placeholder="Nhập mã số sinh viên" name="mssv" required />
+      <button type="submit" style="cursor: pointer" class="btn-add">
+        Thêm sinh viên
+      </button>
+    </form>
+    <!-- form sửa thông tin sản phẩm  -->
+    <form
+      action=""
+      class="formUpdate"
+      style="
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        margin: 12px 0px;
+      "
+    >
+      <h2>Chỉnh sửa thông tin sinh viên</h2>
+      <input type="hidden" name="studentId" id="studentIdUpdate" />
+
+      <input
+        type="text"
+        placeholder="Nhập tên sinh viên"
+        name="nameUpdate"
+        required
+      />
+      <input
+        type="text"
+        placeholder="Nhập mssv"
+        name="mssvUpdate"
+        required
+      />
+      <button type="submit" style="cursor: pointer">Cập nhật sinh viên</button>
+    </form>
+    <div class="infoStudent"></div>
+    <div class="studentfind"></div>
+  </body>
+</html>
